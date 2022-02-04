@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myblineproduct.model.MaybellineData
 import com.example.myblineproduct.repository.MaybllineRepository
@@ -16,6 +17,7 @@ class MayblineViewModel : ViewModel() {
     private var repository =MaybllineRepository()
 
     var job:Job?=null
+
 
     fun getAPICall(){
 
@@ -42,4 +44,6 @@ class MayblineViewModel : ViewModel() {
     fun getLiveDataerror() :LiveData<String>{
         return error
     }
+
+
 }
